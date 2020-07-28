@@ -101,7 +101,7 @@ namespace GoogleMaps.AspNetCore.Clustering.Algorithm
             var x = radx.RadianToLatLong();
             var y = rady.RadianToLatLong();
 
-            var centroid = new MapPoint { X = x, Y = y, Count = count };
+            var centroid = new MapPoint { X = x, Y = y, Count = count, Data = list.Select(item => item.Data).ToList()};
             return centroid;
         }
 
